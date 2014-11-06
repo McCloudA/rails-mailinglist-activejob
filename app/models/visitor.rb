@@ -17,7 +17,8 @@ class Visitor < ActiveRecord::Base
     result = mailchimp.lists.subscribe({
       :id => Rails.application.secrets.mailchimp_list_id,
       :email => {:email => self.email},
-      :merge_vars => {:groupings => [{:name => 'AFFINITY',
+      :merge_vars => {:referrer => self.referrer.truncate(252, omission: '...'),
+                      :groupings => [{:name => 'AFFINITY',
                                       :groups => [self.affinity.upcase]
                                      }]
                       },
