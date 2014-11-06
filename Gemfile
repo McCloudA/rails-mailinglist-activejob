@@ -9,6 +9,8 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'gibbon'
+gem 'sucker_punch'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
